@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insider Threat Dashboard</title>
+</head>
+<body>
+    <h1>Insider Threat Alerts</h1>
+    <table border="1">
+        <tr>
+            <th>User ID</th>
+            <th>Activity</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for alert in alerts %}
+        <tr>
+            <td>{{ alert.user_id }}</td>
+            <td>{{ alert.activity }}</td>
+            <td>{{ alert.timestamp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
